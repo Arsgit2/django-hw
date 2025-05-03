@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Домашка 32</title></head>
+<body>
+  <h1>Домашка №32</h1>
+  {% if messages %}
+    {% for message in messages %}
+      <div style="border: 1px solid black; margin: 5px; padding: 5px;">
+        <strong>{{ message.tags }}</strong>: {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+</body>
+</html>
