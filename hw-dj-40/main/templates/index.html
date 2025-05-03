@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Context Processor Test</title>
+</head>
+<body>
+    <h2>Список всех пользователей:</h2>
+    <ul>
+        {% for user in all_users %}
+            <li>{{ user.username }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Ваши группы:</h2>
+    <ul>
+        {% for group in user_groups %}
+            <li>{{ group.name }}</li>
+        {% empty %}
+            <li>Вы не состоите ни в одной группе.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
