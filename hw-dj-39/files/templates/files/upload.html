@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload</title>
+</head>
+<body>
+    <h2>Upload File</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+
+    <h2>Uploaded Files</h2>
+    {% for file in files %}
+        <p>{{ file.file.name }}</p>
+        {% if file.image %}
+            <img src="{{ file.image.url }}" width="150">
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
