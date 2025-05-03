@@ -1,0 +1,6 @@
+{% load custom_tags %}
+<p>Оригинал: {{ text }}</p>
+<p>SHOUT: {{ text|shout }}</p>
+<p>Без пробелов: {{ text|remove_spaces }}</p>
+<p>Результат умножения: {% multiply number1 number2 as res %} {{ res }}</p>
+<p>Случайный: {% random_choice "яблоко" "банан" "груша" as fruit %} {{ fruit }}</p>
