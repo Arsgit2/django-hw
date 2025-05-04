@@ -1,0 +1,1 @@
+# Placeholder manage.py (Django setup not included in this script)
